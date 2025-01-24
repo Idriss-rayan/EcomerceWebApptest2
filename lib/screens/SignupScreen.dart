@@ -20,6 +20,29 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("sign up screen"),
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            TextFormField(
+              controller: emailcontroller,
+            ),
+            TextFormField(
+              controller: passwordcontroller,
+            ),
+            MaterialButton(
+              child: Text('SignUp'),
+              onPressed: () {
+                SignUp();
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
