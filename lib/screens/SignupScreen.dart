@@ -23,24 +23,29 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       appBar: AppBar(
         title: Text("sign up screen"),
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 18, 47, 97),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            TextFormField(
-              controller: emailcontroller,
-            ),
-            TextFormField(
-              controller: passwordcontroller,
-            ),
-            MaterialButton(
-              child: Text('SignUp'),
-              onPressed: () {
-                SignUp();
-              },
-            ),
-          ],
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+        ),
+        child: Center(
+          child: Column(
+            children: [
+              TextFormField(
+                controller: emailcontroller,
+              ),
+              TextFormField(
+                controller: passwordcontroller,
+              ),
+              MaterialButton(
+                child: Text('SignUp'),
+                onPressed: () {
+                  SignUp();
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
